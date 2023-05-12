@@ -26,7 +26,6 @@
 
 .apidata{
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -142,3 +141,82 @@
     height: 50%;
 }
 
+@media all and (max-width :1000px){
+    .apidata{
+        width: 100%;
+        flex-wrap: wrap;
+    }    
+}
+
+@media all and (max-width:1000px){
+    .cartone{
+        width: 100%;
+    }
+}
+
+@media all and (max-width:950px){
+    .apidata{
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .cartone{
+        display: block;
+    }
+}
+
+@media all and (max-width:700px){
+    .dataset{
+        font-size: 0.50rem;
+    }
+    .dataset a{
+        font-size: 0.50rem;
+    }
+    .cartset{
+        font-size: 0.50rem;
+    }
+    .cartset img{
+        height: 30%;
+    }
+}
+
+@media all and (max-width:600px){
+    .setform input{
+        width: 250px;
+        padding: 0.50rem;
+    }
+
+    .setform button{
+        width: 250px;
+        padding: 0.50rem;
+    }
+    .setform h1{
+        font-size: 1rem;
+    }
+
+    .login input{
+        width: 250px;
+        padding: 0.50rem;
+    }
+
+    .login button{
+        width: 250px;
+        padding: 0.50rem;
+    }
+    .conleft h3{
+        font-size: 1rem;
+    }
+    .conright h3{
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width:350px){
+    .setform input{
+        width: 200px;
+    }
+}
+
+@media all and (max-width:400px){
+    
+}
