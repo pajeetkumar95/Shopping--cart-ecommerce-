@@ -21,9 +21,9 @@ function App() {
         <Header />
           <Routes>
             <Route path='/' element={<Rajister/>} />
-            <Route path='/product' element={<Product />} />
             <Route path='/login' element={<Login />} />
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/product' element={<Product />} />
             <Route path='*' element={<Error />} />
           </Routes>
         </BrowserRouter>

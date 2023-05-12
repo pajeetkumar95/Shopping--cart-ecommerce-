@@ -1,24 +1,36 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    function handlelogin(e){
+    const navigate = useNavigate()
+
+    function handlelogin(e) {
         e.preventDefault()
+        const datastored = JSON.parse(localStorage.getItem('userform'))
+        datastored.filter((data)=>{
+            if(data.email===email && data.password===password){
+                console.log(data.email,data.password)
+                alert("Login Successful")
+                navigate('/product')
+            }
+            else{
+                alert('user not found')
+            }
+        })
     }
+
 
     return (
         <div>
             <form onSubmit={handlelogin}>
-                <label>Email :</label>
                 <input type='email' placeholder='Enter Your Email'
-                    value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                <label>Password :</label>
+                    value={email} onChange={(e) => { setEmail(e.target.value) }} /><br />
                 <input type='password' placeholder='Enter Your Password'
-                    value={password} onChange={(e) => { setPassword(e.target.value) }} />
-                <label>Login Page :</label>
+                    value={password} onChange={(e) => { setPassword(e.target.value) }} /><br />
                 <button type='submit'>Login</button>
             </form>
         </div>
