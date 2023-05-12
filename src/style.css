@@ -60,13 +60,6 @@
     margin: 0.50rem 0;
 }
 
-.cartone{
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-    border: 1px solid;
-}
-
 .setform{
     background-color: #312f2f;
     height: 90vh;
@@ -97,5 +90,55 @@
     padding: 1rem 0;
     text-align: center;
     font-size: 1rem;
+}
+
+.login{
+    background-color: #312f2f;
+    height: 90vh;
+}
+
+.setlogin{
+    width: 30%;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.setlogin input{
+    width: 300px;
+    padding: 1rem 0;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.setlogin button{
+    width: 300px;
+    padding: 1rem 0;
+    font-size: 1rem ;
+}
+
+.cartone{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #312f2f;
+}
+
+.cartset{
+    width: 30%;
+    border: 1px solid;
+    margin: 0.50rem 1rem;
+    text-align: center;
+    background-color: #e2e2cf;
+    border-radius: 20px;
+    height: 450px;
+}
+
+.cartset img{
+    width: 80%;
+    mix-blend-mode: darken;
+    height: 60%;
+    border-radius: 20px;
+    margin-top: 1rem;
+    height: 50%;
 }
 

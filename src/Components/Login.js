@@ -25,8 +25,8 @@ function Login() {
 
 
     return (
-        <div>
-            <form onSubmit={handlelogin}>
+        <div className='login'>
+            <form className='setlogin' onSubmit={handlelogin}>
                 <input type='email' placeholder='Enter Your Email'
                     value={email} onChange={(e) => { setEmail(e.target.value) }} /><br />
                 <input type='password' placeholder='Enter Your Password'
