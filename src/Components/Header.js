@@ -14,7 +14,7 @@ function Header() {
                 <h3>Shopping Cart</h3>
             </div>
             <div className='conright'>
-                <h3>Login</h3>
+                <Link to={'./login'}><h3>Login</h3></Link>
                 <Link to={'/cart'}><h3>Cart<span>{cart.length}</span></h3></Link>
             </div>
         </div>

@@ -1,52 +1,49 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
-function Signup() {
-  const [name,setName]= useState('');
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+
+function Login() {
     const [email,setEmail]= useState('');
     const [password,setPassword]= useState('');
-    const [user,setUser]= useState([]);
+    const navigate = useNavigate()
+  
 
-    function handleSubmit(e) {
+    const handleSubmit=(e)=>{
       e.preventDefault()
-      const userDetails ={
-        name:name,
-        email:email,
-        password:password,
-      }
-      console.log(userDetails)
-      setUser([...user,userDetails])
-      alert("user registered Please move to login page ")
-     
+      const storedDetails = JSON.parse((localStorage.getItem("user")))
+      storedDetails.filter((user) => {
+        if(user.email === email && user.password === password){
+          console.log(user.email,user.password)
+
+          alert("login successful")
+          navigate("/product")
+        }
+        else{
+          alert("user not found")
+        }
+
+      })
+      console.log(storedDetails)
       
     }
-    useEffect(() => {
-      localStorage.setItem("user" , JSON.stringify(user))
-    } ,[user])
     
+
 
   return (
     <div>
         <form onSubmit={handleSubmit}>
-        <label>Name :</label>
-            <input type="text" required placeholder='Enter Your Name' value={name} onChange={(e)=>{setName(e.target.value)}}></input><br/>
 
             <label>Email :</label>
-            <input type='email' required placeholder='Enter Your Email' value={email} onChange={(e)=>{setEmail(e.target.value)}} ></input><br/>
+            <input type='email' placeholder='Enter Your Email' value={email} onChange={(e)=>{setEmail(e.target.value)}} ></input><br/>
 
             <label>Password :</label>
-            <input type="password" required placeholder='Enter Your Password' value={password} onChange={(e)=>{setPassword(e.target.value)}}></input><br/>
+            <input type="password" placeholder='Enter Your Password' value={password} onChange={(e)=>{setPassword(e.target.value)}}></input><br/>
 
             <button>Submit</button>
-
-          <Link to={"/"}><h1>Login</h1></Link>
-       
+            <Link to={"/signup"}>Click to signup</Link>
         </form>
     </div>
   )
 }
 
-
-
-
-export default Signup
+export default Login
