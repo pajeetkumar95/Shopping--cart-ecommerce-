@@ -10,10 +10,23 @@ function Login() {
 
     function handlelogin(e) {
         e.preventDefault()
-        const datastored = JSON.parse(localStorage.getItem('userform'))
-        datastored.filter((data)=>{
+        // const StoredDeatails = JSON.parse(localStorage.getItem('userform'))
+        // const user = StoredDeatails.filter((data) => {
+        //     return data.email === email && data.password === password
+        // })
+        // if (user.length > 0) {
+        //     console.log(user.email , user.password)
+        //     alert("Login Successful")
+        //     navigate('/product')
+        // }
+        // else {
+        //     alert('user not found')
+        // }
+
+        const StoredDeatails = JSON.parse(localStorage.getItem('userform'))
+        StoredDeatails.filter((data)=>{
             if(data.email===email && data.password===password){
-                console.log(data.email,data.password)
+                console.log(data.email , data.password)
                 alert("Login Successful")
                 navigate('/product')
             }
@@ -21,6 +34,11 @@ function Login() {
                 alert('user not found')
             }
         })
+        
+        setEmail('')
+        setPassword('')
+
+        console.log(StoredDeatails)
     }
 
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+
 
 function Rajister() {
 
@@ -19,7 +19,9 @@ function Rajister() {
     setData([...data, userDetails])
     alert("User Details Rajister Successful Please Login")
     console.log(userDetails)
-
+    setName('')
+    setEmail('')
+    setPassword('')
   }
   useEffect(() => {
     localStorage.setItem("userform", JSON.stringify(data))

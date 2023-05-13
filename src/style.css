@@ -182,12 +182,17 @@
 
 @media all and (max-width:600px){
     .setform input{
-        width: 250px;
         padding: 0.50rem;
     }
 
+    .form input{
+        text-align: left;
+        padding-right: 2rem;
+        width: 200px;
+    }
+
     .setform button{
-        width: 250px;
+        width: 200px;
         padding: 0.50rem;
     }
     .setform h1{
@@ -195,12 +200,13 @@
     }
 
     .login input{
-        width: 250px;
+        width: 200px;
+        text-align: left;
         padding: 0.50rem;
     }
 
     .login button{
-        width: 250px;
+        width: 200px;
         padding: 0.50rem;
     }
     .conleft h3{
@@ -208,6 +214,9 @@
     }
     .conright h3{
         font-size: 1rem;
+    }
+    .apidata{
+        padding-left: 5rem;
     }
 }
 
