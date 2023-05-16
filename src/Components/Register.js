@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-function Rajister() {
+function Register() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -31,7 +31,7 @@ function Rajister() {
 
   return (
     <div className='setform'>
-      <h1>Rejister For Our Ecommerce Site</h1>
+      <h1>Register For Our Ecommerce Site</h1>
       <form className='form' onSubmit={handlesubmit}>
         <input type='name' placeholder='Enter Your Name' value={name} onChange={(e) => { setName(e.target.value) }}>
         </input><br />
@@ -45,4 +45,4 @@ function Rajister() {
   )
 }
 
-export default Rajister
+export default Register

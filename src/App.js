@@ -1,7 +1,7 @@
 import React, { createContext, useState }  from 'react'
 import Header from './Components/Header'
 import Product from './Components/Product'
-import Rajister from './Components/Rejister'
+import Ragister from './Components/Register'
 import Login from './Components/Login'
 import Cart from './Components/Cart'
 import Error from './Components/Error'
@@ -20,7 +20,7 @@ function App() {
         <BrowserRouter>
         <Header />
           <Routes>
-            <Route path='/' element={<Rajister/>} />
+            <Route path='/' element={<Ragister/>} />
             <Route path='/login' element={<Login />} />
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/product' element={<Product />} />
